@@ -10,9 +10,20 @@
         width : 500px;
         margin : 0 auto;
         margin-top: 40px;
+        align-content: center;
+    }
+    .Form{
+        width : 500px;
+        margin : 0 auto;
+        margin-top: 40px;
+        align-content: center;
     }
 </style>
 <body>
+    <div class="Form">
+        <a th:href="@{/board}">Home</a>
+        <a th:href="@{/board/list}">list</a>
+    </div>
     <div class="layout">
         <table>
             <thead>
@@ -38,6 +49,9 @@
         <form th:action="@{/board/list}" method="get">
             <input type="text" name="searchKeyword">
             <button type="submit">검색</button>
+        </form>
+        <form th:action="@{/board/write}" method="get">
+            <button type="submit">게시글 작성</button>
         </form>
     </div>
 </body>

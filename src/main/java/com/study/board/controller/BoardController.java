@@ -20,6 +20,12 @@ public class BoardController {
 
     @Autowired
     private BoardService boardService;
+
+    @GetMapping("/board")
+    public String boardHome(){
+        return "index";
+    }
+
     @GetMapping("/board/write")
     public String BoardWriteForm(){
 
